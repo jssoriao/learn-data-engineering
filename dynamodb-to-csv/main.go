@@ -84,7 +84,7 @@ func main() {
 	ddb := dynamodb.NewFromConfig(cfg)
 	items, err := GetDataFromDynamoDB(ddb, ddbTableName, ddbItemsHash)
 	if err != nil {
-		log.Fatalf("failed to query data from dynamodb: %w", err)
+		log.Fatalf("failed to query data from dynamodb: %v", err)
 	}
 
 	header := []string{"id", "column2", "column3"}
